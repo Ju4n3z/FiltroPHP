@@ -6,6 +6,7 @@
     $dotenv = Dotenv\Dotenv::createImmutable("../");
     $dotenv->load();
 
+    /*
     $router->get("/campers/{id}", function($id){
         $cox = new \App\connect();
         $res = $cox->con->prepare("SELECT * FROM campers WHERE idCamper = :ID");
@@ -14,6 +15,7 @@
         $res = $res->fetchAll(\PDO::FETCH_ASSOC);
         echo json_encode($res);
     });
+    */
 
     $router->get("/campers", function(){
         $cox = new \App\connect();
